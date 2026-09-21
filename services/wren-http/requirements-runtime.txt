@@ -1,0 +1,15 @@
+# Runtime set proven by the Wren HTTP S3-S5 acceptance environment.
+# wren-pydantic declares the full pydantic-ai meta package; this service only
+# needs the OpenAI-compatible provider used for Bailian, so install slim first
+# and install the local SDK package with --no-deps.
+duckdb>=1.3,<2
+fastapi>=0.115,<1
+httpx>=0.27,<1
+onnxruntime>=1.17,<1.21
+pydantic>=2,<3
+pydantic-settings>=2.6,<3
+sqlglot>=29,<30
+uvicorn>=0.30,<1
+wrenai[postgres,memory-onnx]==0.14.0
+pydantic-ai-slim[openai]==1.107.6
+pydantic-graph==1.107.6
