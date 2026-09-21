@@ -1,7 +1,10 @@
 FROM python:3.11-slim
 
+ARG PIP_INDEX_URL=https://mirrors.cloud.tencent.com/pypi/simple
+
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
+    PIP_INDEX_URL=${PIP_INDEX_URL} \
     WREN_HTTP_WORKSPACES_FILE=/srv/config/workspaces.json \
     WREN_HTTP_DUCKDB_ROOT=/srv/data \
     WREN_HTTP_WREN_HOME=/srv/config/wren-home \
